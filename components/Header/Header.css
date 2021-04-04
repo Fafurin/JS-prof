@@ -1,0 +1,11 @@
+.header-wrap{
+  display: flex;
+}
+
+.header-cart{
+  margin-left: auto;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
