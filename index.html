@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form class="form" action="#">
+      <p>Пожалуйста, заполните форму регистрации пользователей. Обязательные поля помечены<em>*</em></p>
+      <fieldset>
+      <label class="form__label" for="name">Имя:<em>*</em></label>
+      <input class="form__input form__name" type="text" id="name" placeholder="Ivan Ivanov">
+      <p class="form__alert form__name--alert"></p>
+      
+      <label class="form__label" for="number">Телефон:<em>*</em></label>
+      <input class="form__input form__number" type="text" id="number" placeholder="+7(000)000-0000">
+      <p class="form__alert form__number--alert"></p>
+      
+      <label class="form__label" for="mail">E-mail:<em>*</em></label>
+      <input class="form__input form__mail" type="text" id="mail" placeholder="ivan-ivanov@mail.ru">
+      <p class="form__alert form__mail--alert"></p>
+      
+      <label>Дополнительная информация:<textarea class="form__text"></textarea></label>
+      
+    </fieldset> 
+      <button class="form__btn">Отправить</button>
+    
+    </form>
+    
+    <script src="main.js"></script>
+</body>
+</html>
