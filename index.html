@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Brand</title>
+</head>
+<body>
+  <section id="app">
+  <header class="header">
+    <div class="header-wrapper container">
+        <a class="logo" href="#"><img src="img/logo.png" alt="logo" class="logo__img"><span class="logo__text">BRAN<span class="logo__text-special-case">D</span></span>
+        </a>
+      <div class="search-box">
+        <div class="search-box__browse-btn">Browse</div>
+        <form class="search-box__field" action="#">
+          <input v-model = "userSearch" class="search-box__input" type="text" placeholder="Search for item...">
+          <button type="submit" class="search-box__submit"></button>
+        </form>
+      </div>  
+      <div class="account">
+        <button @click="show=!show" class="account__cart"><svg x="0px" y="0px" viewBox="0 0 459.529 459.529" width="35" height="32">
+          <path d="M17,55.231h48.733l69.417,251.033c1.983,7.367,8.783,12.467,16.433,12.467h213.35c6.8,0,12.75-3.967,15.583-10.2
+          l77.633-178.5c2.267-5.383,1.7-11.333-1.417-16.15c-3.117-4.817-8.5-7.65-14.167-7.65H206.833c-9.35,0-17,7.65-17,17
+          s7.65,17,17,17H416.5l-62.9,144.5H164.333L94.917,33.698c-1.983-7.367-8.783-12.467-16.433-12.467H17c-9.35,0-17,7.65-17,17
+          S7.65,55.231,17,55.231z"/>
+          <path d="M135.433,438.298c21.25,0,38.533-17.283,38.533-38.533s-17.283-38.533-38.533-38.533S96.9,378.514,96.9,399.764
+          S114.183,438.298,135.433,438.298z"/>
+          <path d="M376.267,438.298c0.85,0,1.983,0,2.833,0c10.2-0.85,19.55-5.383,26.35-13.317c6.8-7.65,9.917-17.567,9.35-28.05
+          c-1.417-20.967-19.833-37.117-41.083-35.7c-21.25,1.417-37.117,20.117-35.7,41.083
+          C339.433,422.431,356.15,438.298,376.267,438.298z"/>
+          </svg>
+        <span class="account__total-quantity">{{ totalQuantity }}</span>
+      </button>
+          <div v-if="show" class="shopping-cart">
+            <div class="shopping-cart__items-wrapper">
+              <div class="shopping-cart__item" v-for="product of cartProducts" :key="product.id">
+                  <div class="shopping-cart__item-img-wrap">
+                    <img class="shopping-cart__item-img" :src="product.img" alt="">
+                  </div>
+                  <div class="shopping-cart__item-text"> 
+                      <span class="shopping-cart__item-title shopping-cart__item-text-db">{{ product.name }}</span> 
+                      <span class="shopping-cart__item-price shopping-cart__item-text-db">{{ product.quantity }} x $ {{ product.price }}</span> 
+                  </div>
+                  <button @click="delProduct(product)" class="shopping-cart__del-item"></button>
+              </div>
+          </div>
+          <div class="shopping-cart-total-wrap">
+            <span class="shopping-cart__total">Total</span>
+            <span class="shopping-cart__total shopping-cart__total-value">${{ cartTotal }}</span>
+          </div>
+          </div>
+         <button class="account__btn">My&nbsp;Account</button>
+     </div>
+    </div>
+    <div class="header--border"></div>
+  </header>
+ 
+  <main>
+    <section class="fetured-items container">
+            <div class="fetured-items__items-wrapper">
+                <div class="fetured-items__item" v-for="product of filterProducts" :key="product.id">
+                    <div class="fetured-items__items-add-to-cart-btn_wrapper">
+                        <button class="fetured-items__items-add-to-cart-btn" @click="addProduct(product)">Add to Cart</button>
+                    </div> 
+                    <img class="fetured-items__item-img" :src="product.img" alt="">
+                    <div class="fetured-items__item-text"> 
+                        <span class="fetured-items__item-title fetured-items__item-text-db">{{ product.name }}</span> 
+                        <span class="fetured-items__item-price fetured-items__item-text-db">$ {{ product.price }}</span> 
+                    </div>
+                </div>
+            </div>
+    </section>
+  </main>
+</section>
+  <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
