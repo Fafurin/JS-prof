@@ -1,0 +1,58 @@
+[
+{
+"id": 1,
+"img": "img/fetured-item-1.jpg",
+"name": "Mango People T-shirt",
+"price": "52.00",
+"quantity": 1
+},
+{
+"id": 2,
+"img": "img/fetured-item-2.jpg",
+"name": "Mango People Q-shirt",
+"price": "32.00",
+"quantity": 1
+},
+{
+"id": 3,
+"img": "img/fetured-item-3.jpg",
+"name": "Mango People Z-shirt",
+"price": "52.40",
+"quantity": 1
+},
+{
+"id": 4,
+"img": "img/fetured-item-4.jpg",
+"name": "Mango People O-shirt",
+"price": "45.49",
+"quantity": 1
+},
+{
+"id": 5,
+"img": "img/fetured-item-5.jpg",
+"name": "Mango People T-shirt",
+"price": "48.19",
+"quantity": 1
+},
+{
+"id": 6,
+"img": "img/fetured-item-6.jpg",
+"name": "Mango People T-shirt",
+"price": "36.45",
+"quantity": 1
+},
+{
+"id": 7,
+"img": "img/fetured-item-7.jpg",
+"name": "Mango People L-shirt",
+"price": "42.41",
+"quantity": 1
+},
+{
+"id": 8,
+"img": "img/fetured-item-8.jpg",
+"name": "Mango People F-shirt",
+"price": "56.25",
+"quantity": 1
+}
+]
