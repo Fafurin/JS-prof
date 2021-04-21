@@ -1,0 +1,27 @@
+{
+    "amount": 0,
+    "countGoods": 0,
+    "contents": [
+        {
+            "quantity": 1,
+            "id_product": 3,
+            "product_name": "Mango People H-shirt",
+            "price": 42.4,
+            "img": "img/fetured-item-3.jpg"
+        },
+        {
+            "quantity": 1,
+            "id_product": 2,
+            "product_name": "Mango People Z-shirt",
+            "price": 32.34,
+            "img": "img/fetured-item-2.jpg"
+        },
+        {
+            "quantity": 2,
+            "id_product": 12,
+            "product_name": "Mango People F-shirt",
+            "price": 39.99,
+            "img": "img/product-cart-img-4.jpg"
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section id="app">
+        <header-comp :cartitems="cartGoods" @filtergoods='filterGoods' @addproduct='addProduct'></header-comp>
+
+    <section class="breadcrumb breadcrumb_marg">
+        <div class="breadcrumb-wrapper container">
+            <span class="breadcrumb-title">New Arrivals</span>
+            <span class="breadcrumb-subtitle">
+                <a href="index.html">Home</a>/
+                <a href="#">Men</a>/
+                <a href="#"><span class="breadcrumb-subtitle-special-case">New Arrivals</span></a>
+            </span>
+        </div>
+    </section>
+
+        <shopping-cart></shopping-cart>
+        <footer-comp></footer-comp>
+
+    </section>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="js/HeaderComponent.js"></script>
+<script src="js/ShoppingCartComponent.js"></script>
+<script src="js/FooterComponent.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
