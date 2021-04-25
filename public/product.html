@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+<body>
+<section id="app">
+    <header-comp :cartitems="cartGoods" @filtergoods='filterGoods' @addproduct='addProduct'></header-comp>
+    <section class="breadcrumb">
+        <div class="breadcrumb-wrapper container">
+            <span class="breadcrumb-title">New Arrivals</span>
+            <span class="breadcrumb-subtitle">
+                <a href="index.html">Home</a>/
+                <a href="#">Men</a>/
+                <a href="#"><span class="breadcrumb-subtitle-special-case">New Arrivals</span></a>
+            </span>
+        </div>
+    </section>
+    <section class="product container">
+        <div class="product__sidebar">
+           <div class="product__sidebar-item">
+               <input class="product__sidebar-toggler" type="checkbox" name="sidebar" id="category" checked="checked" />
+               <label class="product__sidebar-label" for="category">Category</label>
+               <div class="product__sidebar-nav">
+                    <a class="product_sidebar-link" href="#">Accessories</a>
+                    <a class="product_sidebar-link" href="#">Bags</a>
+                    <a class="product_sidebar-link" href="#">Denim</a>
+                    <a class="product_sidebar-link" href="#">Hoodies & Sweatshirts</a>
+                    <a class="product_sidebar-link" href="#">Jackets & Coats</a>
+                    <a class="product_sidebar-link" href="#">Pants</a>
+                    <a class="product_sidebar-link" href="#">Polos</a>
+                    <a class="product_sidebar-link" href="#">Shirts</a>
+                    <a class="product_sidebar-link" href="#">Shoes</a>
+                    <a class="product_sidebar-link" href="#">Shorts</a>
+                    <a class="product_sidebar-link" href="#">Sweaters & Knits</a>
+                    <a class="product_sidebar-link" href="#">T-Shirts</a>
+                    <a class="product_sidebar-link" href="#">Tanks</a>
+                </div>
+           </div>
+           <div class="product__sidebar-item">
+               <input class="product__sidebar-toggler" type="checkbox" name="sidebar" id="brand"/>
+               <label class="product__sidebar-label" for="brand">Brand</label>            
+               <div class="product__sidebar-nav">
+                    <a class="product_sidebar-link" href="#">Accessories</a>
+                    <a class="product_sidebar-link" href="#">Bags</a>
+                    <a class="product_sidebar-link" href="#">Denim</a>
+                    <a class="product_sidebar-link" href="#">Hoodies & Sweatshirts</a>
+                    <a class="product_sidebar-link" href="#">Jackets & Coats</a>
+                    <a class="product_sidebar-link" href="#">Pants</a>
+                    <a class="product_sidebar-link" href="#">Polos</a>
+                    <a class="product_sidebar-link" href="#">Shirts</a>
+                    <a class="product_sidebar-link" href="#">Shoes</a>
+                    <a class="product_sidebar-link" href="#">Shorts</a>
+                    <a class="product_sidebar-link" href="#">Sweaters & Knits</a>
+                    <a class="product_sidebar-link" href="#">T-Shirts</a>
+                    <a class="product_sidebar-link" href="#">Tanks</a>
+                </div>
+            </div>
+           <div class="product__sidebar-item">
+                <input class="product__sidebar-toggler" type="checkbox" name="sidebar" id="designer"/>
+                <label class="product__sidebar-label" for="designer">Designer</label>          
+                <div class="product__sidebar-nav">
+                    <a class="product_sidebar-link" href="#">Accessories</a>
+                    <a class="product_sidebar-link" href="#">Bags</a>
+                    <a class="product_sidebar-link" href="#">Denim</a>
+                    <a class="product_sidebar-link" href="#">Hoodies & Sweatshirts</a>
+                    <a class="product_sidebar-link" href="#">Jackets & Coats</a>
+                    <a class="product_sidebar-link" href="#">Pants</a>
+                    <a class="product_sidebar-link" href="#">Polos</a>
+                    <a class="product_sidebar-link" href="#">Shirts</a>
+                    <a class="product_sidebar-link" href="#">Shoes</a>
+                    <a class="product_sidebar-link" href="#">Shorts</a>
+                    <a class="product_sidebar-link" href="#">Sweaters & Knits</a>
+                    <a class="product_sidebar-link" href="#">T-Shirts</a>
+                    <a class="product_sidebar-link" href="#">Tanks</a>
+                </div>
+            </div>
+        </div>
+        <div class="product__content">
+          <div class="product__filter">
+              <div class="product__filter-item product__filter-item_trending">
+                  <span class="product__filter-item-title">Trending now</span>
+                  <div class="product__filter-item-wrapper_trending">
+                     <span class="product__filter-item-trend">Bohemian</span>
+                     <span class="product__filter-item-trend">Floral</span>
+                     <span class="product__filter-item-trend">Lace</span>
+                     <span class="product__filter-item-trend">Floral</span>
+                     <span class="product__filter-item-trend">Lace</span>
+                     <span class="product__filter-item-trend">Bohemian</span>
+                  </div>
+              </div>
+              <div class="product__filter-item product__filter-item_size">
+                  <span class="product__filter-item-title">Size</span>
+                  <div class="product__filter-item-wrapper_size">
+                    <label class="product__filter-size-item">
+                        <input class="product__filter-size-check" type="checkbox">
+                        <span class="product__filter-size-label">XXS</span>
+                    </label>
+                    <label class="product__filter-size-item">
+                        <input class="product__filter-size-check" type="checkbox">
+                        <span class="product__filter-size-label">XS</span>
+                    </label>
+                    <label class="product__filter-size-item">
+                        <input class="product__filter-size-check" type="checkbox">
+                        <span class="product__filter-size-label">S</span>
+                    </label>
+                    <label class="product__filter-size-item">
+                        <input class="product__filter-size-check" type="checkbox">
+                        <span class="product__filter-size-label">M</span>
+                    </label>
+                    <label class="product__filter-size-item">
+                        <input class="product__filter-size-check" type="checkbox">
+                        <span class="product__filter-size-label">L</span>
+                    </label>
+                    <label class="product__filter-size-item">
+                        <input class="product__filter-size-check" type="checkbox">
+                        <span class="product__filter-size-label">XL</span>
+                    </label>
+                    <label class="product__filter-size-item">
+                        <input class="product__filter-size-check" type="checkbox">
+                        <span class="product__filter-size-label">XXL</span>
+                    </label>
+                  </div>
+              </div>
+              
+              <div class="product__filter-item product__range-filter">
+                <span class="product__filter-item-title">Price</span>
+                <div class="product_range-filter-range-controls">
+                  <div class="product_range-filter-scale">
+                    <div class="product_range-filter-bar"></div>
+                  </div>
+                  <div class="product_range-filter-toggle product_range-filter-toggle-min" tabindex="0"></div>
+                  <div class="product_range-filter-toggle product_range-filter-toggle-max" tabindex="0"></div>
+                </div>
+                <div class="product_range-filter-values-wrap">
+                    <span class="product_range-filter-value">$52</span>
+                    <span class="product_range-filter-value">$400</span>
+                </div>
+                
+              </div>
+
+          </div>
+          <div class="product__sorter">
+               <span class="product__sorter-text">Sort By</span>
+               <select class="product__sorter-btn">
+                  <option>Name</option>
+                  <option>Price</option>
+               </select>
+               <span class="product__sorter-text">Show</span>
+               <select class="product__sorter-btn">
+                  <option>09</option>
+                  <option>12</option>
+                  <option>15</option>
+               </select>
+          </div>
+          <div class="product__content-body">
+
+          <products-comp :showed='showedProducts' @addproduct='addProduct' @remove='remove'></products-comp>
+
+              <div class="product__cards-controls">
+                <div class="product__cards-pagination">
+                    <a class="product__link" href="#">&lang;</a>
+                    <a class="product__link product__link-active" href="#">1</a>
+                    <a class="product__link" href="#">2</a>
+                    <a class="product__link" href="#">3</a>
+                    <a class="product__link" href="#">4</a>
+                    <a class="product__link" href="#">5</a>
+                    <a class="product__link" href="#">6</a>
+                    <a class="product__link" href="#">&hellip;</a>
+                    <a class="product__link" href="#">20</a>
+                    <a class="product__link product__link-active" href="#">&rang;</a>
+                </div>
+                <button class="product__cards-btn">View All</button>
+            </div>
+           </div>
+       </div>
+    </section>
+    <footer-comp></footer-comp>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="js/HeaderComponent.js"></script>
+<script src="js/ProductComponent.js"></script>
+<script src="js/FooterComponent.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

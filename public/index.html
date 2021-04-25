@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Brand</title>
+</head>
+<body>
+<section id="app">
+    <header-comp :cartitems="cartGoods" @filtergoods='filterGoods' @addproduct='addProduct'></header-comp>
+  <main>
+<!--        <section class="main-offer">
+            <div class="main-offer__wrapper container">
+                <h1 class="main-offer__text-wrapper"> 
+                <span class="main-offer__text-title">THE BRAND</span> 
+                <span class="main-offer__text-subtitle">OF&nbsp;LUXERIOUS<span class="main-offer__text-subtitle-spesial-case"> FASHION</span></span>
+                </h1>
+            </div>
+        </section>-->
+<!--        <section class="offer-cards container">
+            <div class="offer-cards__column">
+                <div class="offer-cards__card"> <img class="offer-cards__card-img" src="img/categories_img1.jpg" alt="">
+                    <div class="offer-cards__card-text"> <span class="offer-cards__card-text-title offer-cards__card-text-db">Hot deal</span> <span class="offer-cards__card-text-subtitle offer-cards__card-text-db">For men</span> </div>
+                </div>
+                <div class="offer-cards__card"> <img class="offer-cards__card-img" src="img/categories_img3.jpg" alt="">
+                    <div class="offer-cards__card-text"> <span class="offer-cards__card-text-title offer-cards__card-text-db">Luxirous &amp;&nbsp;trendy</span> <span class="offer-cards__card-text-subtitle offer-cards__card-text-db">Accesories</span> </div>
+                </div>
+            </div>
+            <div class="offer-cards__column">
+                <div class="offer-cards__card"> <img class="offer-cards__card-img" src="img/categories_img2.jpg" alt="">
+                    <div class="offer-cards__card-text"> <span class="offer-cards__card-text-title offer-cards__card-text-db">30% offer</span> <span class="offer-cards__card-text-subtitle offer-cards__card-text-db">women</span> </div>
+                </div>
+                <div class="offer-cards__card"> <img class="offer-cards__card-img" src="img/categories_img4.jpg" alt="">
+                    <div class="offer-cards__card-text"> <span class="offer-cards__card-text-title offer-cards__card-text-db">New arrivals</span> <span class="offer-cards__card-text-subtitle offer-cards__card-text-db">For kids</span> </div>
+                </div>
+            </div>
+        </section>-->
+        <section class="fetured-items container">
+            <h2 class="fetured-items__title">Fetured Items</h2>
+            <p class="fetured-items__subtitle">Shop for items based on&nbsp;what we&nbsp;featured in&nbsp;this week</p>
+            <featured-products-comp :showed='showedProducts' @addproduct='addProduct' @remove='remove'></featured-products-comp>
+            <a href="product.html" class="fetured-items__button">Browse All Product</a>
+        </section>
+  </main>
+  <section class="feature container">
+        <div class="feature__text-wrapper"><span class="feature__text-title">30% <span class="feature__text-title-special-case">offer</span></span> <span class="feature__text-subtitle">for women</span> </div>
+        <div class="feature__box-wrapper">
+            <div class="feature__box feature__box-icon-1"> <span class="feature__box-title">Free Delivery</span>
+                <p class="feature__box-text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+            </div>
+            <div class="feature__box feature__box-icon-2"> <span class="feature__box-title">Sales & discounts</span>
+                <p class="feature__box-text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+            </div>
+            <div class="feature__box feature__box-icon-3"> <span class="feature__box-title">Quality assurance</span>
+                <p class="feature__box-text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+            </div>
+        </div>
+  </section>
+    <footer-comp></footer-comp>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="js/HeaderComponent.js"></script>
+<script src="js/FeaturedProductsComponent.js"></script>
+<script src="js/FooterComponent.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
